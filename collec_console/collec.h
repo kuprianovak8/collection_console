@@ -22,11 +22,22 @@ public:
     void setAuthor(string a) {author = a;}
     void setYear(int y) {year = y;}
 
-    void PrintBook()
+    string showBooks()
     {
-      cout << "Titlte: " << title << endl;
-      cout << "Author: " << author << endl;
-      cout << "Year: " << year << endl;
+      cout << title << " " << author << " " << endl;
+//      cout << "Author: " << author << endl;
+//      cout << "Year: " << year << endl;
+    return title;
+    }
+
+    void setBooks()
+    {
+        cout << "Title of book: ";
+        cin >> title;
+        cout << "Author: ";
+        cin >> author;
+        cout << "\n" << "Year: ";
+        cin >> year;
     }
 
 };
@@ -46,13 +57,35 @@ public:
     void setName(string n) {name = n;}
     void setGenre(string g) {genre = g;}
     void setYear(int y) {year = y;}
-    void PrintMovies()
+
+    void showMovies()
     {
-      cout << "Name: " << name << "\t Genre: " << genre << "\t Year: " << year;
-//      cout << "Genre: " << genre << endl;
-//      cout << "Year: " << year << endl;
+      cout << "Name: " << name << endl;
+      cout << "Genre: " << genre << endl;
+      cout << "Year: " << year << endl;
+    }
+
+    void setMovies()
+    {
+        cin >> name;
+        cin >> genre;
+        cin >> year;
     }
 };
+
+class Collections
+{
+public:
+    Books objA;
+    Movies objB;
+
+    void addBook() {objA.setBooks();}
+    void addFilm() {objB.setMovies();}
+
+    string getBooks() {objA.showBooks();}
+    void getFilms() {objB.showMovies();}
+};
+
 
 class collec
 {
